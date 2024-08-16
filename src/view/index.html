@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelHub</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="align-items-center py-4 bg-body-tertiary">
+    <main>
+        <div class="formulario">
+            <section class="form">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Logo">
+                </div>
+
+                <label for="nomeHotel">Nome do Hotel</label>
+                <input type="text" class="input" placeholder="Digite o nome do hotel" id="nomeHotel">
+
+                <label for="cnpj">CNPJ</label>
+                <input type="text" class="input" placeholder="Digite o CNPJ" id="cnpj">
+
+                <button type="button" class="btn" id="button">Enviar</button>
+            </section>
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <div class="pesquisar">
+        <div class="inputLabel">
+            <label for="cnpjHotel">Buscar hotel</label>
+            <input type="text" class="inputSearch" placeholder="Digite o CNPJ do hotel" id="pesquisar">
+        </div>
+        <button type="button" class="btn-enviar" id="buttonPesquisar">
+            <i class="fas fa-search search-icon"></i> Buscar
+        </button>
+    </div>
+
+    <table class="tabela">
+        <thead class="tabela-cabecalho">
+            <tr>
+                <th>Id</th>
+                <th>Nome do Hotel</th>
+                <th>CNPJ</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody id="dados"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</html>
