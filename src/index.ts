@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use('/hotel', routes);
 
+
 const port = 3000;
 
 app.listen(port, () => {
